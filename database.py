@@ -22,6 +22,7 @@ class MyDatabase:
         Session = sessionmaker(bind=self.engine)
         self.session = Session()
 
+
     def select_bike(self, id: int):
         bike = self.session.query(Bike).filter_by(id=id).first()
         if bike:

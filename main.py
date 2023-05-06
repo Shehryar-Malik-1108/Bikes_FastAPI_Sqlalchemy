@@ -1,9 +1,8 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 from database import MyDatabase
 
 app = FastAPI(title="Sherry Ke Bikes")
 db = MyDatabase()
-
 
 @app.get("/")
 def home():
