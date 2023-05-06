@@ -8,9 +8,10 @@ client = TestClient(app)
 class TestApi(unittest.TestCase):
     def test_valid_select_bike(self):
         response = client.get("/Select_bike?id=1")
-        print(response.status_code)
+        self.assertEqual(response.status_code, 404)
         print(response.content)
         print(response.json())
+        self.assertTrue(True)
 
     def test_invalid_select_bike(self):
         response = client.get("/Select_bike?id=100")

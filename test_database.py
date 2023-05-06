@@ -5,7 +5,6 @@ from database import Bike
 
 
 class Testdatabase(unittest.TestCase):
-
     def setUp(self):
         engine = create_engine('sqlite:///:memory:')
         self.Session = sessionmaker(bind=engine)
